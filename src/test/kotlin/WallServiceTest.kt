@@ -1,8 +1,8 @@
 import org.junit.Test
 
 import org.junit.Assert.*
-import ru.netology.data.Post
-import ru.netology.service.WallService
+import ru.netology.data.*
+import ru.netology.service.*
 
 class WallServiceTestAdd {
     @Test
@@ -17,20 +17,44 @@ class WallServiceTestAdd {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
         val postExpected = post.copy(id = 1)
 
@@ -54,20 +78,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val post2 = Post(
@@ -79,20 +127,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val post3 = Post(
@@ -104,20 +176,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val postUpdate = Post(
@@ -130,20 +226,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         service.add(post1)
@@ -167,20 +287,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val post2 = Post(
@@ -192,20 +336,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val post3 = Post(
@@ -217,20 +385,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         val postUpdate = Post(
@@ -243,20 +435,44 @@ class WallServiceTestUpdate {
             replyOwnerId = 545,
             replyPostId = 77,
             friendsOnly = false,
-            comments = Unit,
-            copyright = Unit,
-            likes = Unit,
-            reposts = Unit,
-            views = Unit,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
             postType = "post",
+            postSource = null,
+            geo = null,
             signerId = 0,
+            copyHistory = null,
             canPin = true,
             canDelete = true,
             canEdit = true,
             isPinned = false,
             markedAsAds = false,
             isFavorite = false,
-            dunut = Unit
+            dunut = null
         )
 
         service.add(post1)
