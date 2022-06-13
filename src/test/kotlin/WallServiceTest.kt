@@ -3,7 +3,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import ru.netology.data.*
 import ru.netology.service.*
-
+import ru.netology.data.Post.*
 class WallServiceTestAdd {
     @Test
     fun add() {
@@ -45,6 +45,7 @@ class WallServiceTestAdd {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -106,6 +107,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -155,6 +157,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -204,6 +207,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -254,6 +258,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -315,6 +320,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -364,6 +370,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -413,6 +420,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
@@ -463,6 +471,7 @@ class WallServiceTestUpdate {
             ),
             postType = "post",
             postSource = null,
+            attachments = null,
             geo = null,
             signerId = 0,
             copyHistory = null,
