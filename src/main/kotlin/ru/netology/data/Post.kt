@@ -81,7 +81,7 @@ data class Post(
         val editMode: String
     )
 
-    abstract class Attachment {
+    sealed class Attachment {
         abstract val type: String
     }
 
