@@ -4,6 +4,81 @@ import org.junit.Assert.*
 import ru.netology.data.*
 import ru.netology.service.*
 import ru.netology.data.Post.*
+import ru.netology.exceptions.PostNotFoundException
+
+class WallServiceTestCreateComment{
+    @Test (expected = PostNotFoundException::class)
+    fun createCommentShouldThrow(){
+        val service = WallService()
+        val post = Post(
+            ownerId = 4527,
+            fromId = 4527,
+            createdBy = 23,
+            date = 1654825676,
+            text = "Hello, Java!",
+            replyOwnerId = 545,
+            replyPostId = 77,
+            friendsOnly = false,
+            comments = Comments(
+                count = 0,
+                canPost = false,
+                groupsCanPost = false,
+                canClose = true,
+                canOpen = true
+            ),
+            copyright = Copyright(
+                id = 0,
+                link = "",
+                name = "",
+                type = ""
+            ),
+            likes = Likes(
+                count = 0,
+                userLikes = false,
+                canLike = true,
+                canPublish = true
+            ),
+            reposts = Reposts(
+                count = 0,
+                userReposted = false
+            ),
+            views = Views(
+                count = 1
+            ),
+            postType = "post",
+            postSource = null,
+            attachments = null,
+            geo = null,
+            signerId = 0,
+            copyHistory = null,
+            canPin = true,
+            canDelete = true,
+            canEdit = true,
+            isPinned = false,
+            markedAsAds = false,
+            isFavorite = false,
+            dunut = null
+        )
+
+        service.add(post)
+        service.add(post)
+        service.add(post)
+
+        val comment = Comment(
+            fromId = 4654,
+            date = 1654826532,
+            text = "Вау!",
+            donut = null,
+            replyToUser = 0,
+            replyToComment = 0,
+            attachments = null,
+            parentsStack = null,
+            thread = null
+            )
+
+        service.createComment(4, comment)
+    }
+}
 class WallServiceTestAdd {
     @Test
     fun add() {
